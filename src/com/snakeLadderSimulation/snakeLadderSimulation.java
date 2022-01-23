@@ -20,11 +20,14 @@ public class snakeLadderSimulation {
 		
 		switch(checkOption) {
 		case 1: //ladder
+				if ((playerAPosition+dice)<=winPosition)
 				playerAPosition=playerAPosition+dice;
 				System.out.println("position of the player A=" +playerAPosition);
 				break;
 		case 2: //snake
 				playerAPosition-=dice;
+				if ((playerAPosition-dice)<0)
+				playerAPosition=0;	
 				System.out.println("position of the player A=" +playerAPosition);
 				break;
 		case 3: //NoPlay
