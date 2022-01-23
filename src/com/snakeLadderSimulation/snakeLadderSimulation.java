@@ -16,6 +16,23 @@ public class snakeLadderSimulation {
 		int dice=(int)(Math.random()*6)+1;
 		numberOfDice++;
 		System.out.println("Number got on dice=" +dice);
+		int checkOption=(int)(Math.random()*3)+1;
+		System.out.println("checking option=" +checkOption);
+		
+		switch(checkOption) {
+		case 1: //ladder
+				playerAPosition=playerAPosition+dice;
+				System.out.println("position of the player A=" +playerAPosition);
+				break;
+		case 2: //snake
+				playerAPosition-=dice;
+				System.out.println("position of the player A=" +playerAPosition);
+				break;
+		case 3: //NoPlay
+				System.out.println("No Play");
+				break;
+				
+		}
 	} 
 
 }
