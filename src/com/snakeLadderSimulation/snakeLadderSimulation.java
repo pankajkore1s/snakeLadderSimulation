@@ -1,9 +1,9 @@
 package com.snakeLadderSimulation;
 
 public class snakeLadderSimulation {
-	
+
 	public static final int winPosition=100;
-	
+
 	public static void main (String []args) {
 
 		int initialPosition=0;
@@ -12,30 +12,31 @@ public class snakeLadderSimulation {
 		int playerBPosition=0;
 		System.out.println("Welcome to SnakeLadder Simulation");
 
-	while( playerAPosition < winPosition && playerBPosition < winPosition){
-		int dice=(int)(Math.random()*6)+1;
-		System.out.println("Number got on dice=" +dice);
-		int checkOption=(int)(Math.random()*3)+1;
-		System.out.println("checking option=" +checkOption);
-		
-		switch(checkOption) {
-		case 1: //ladder
+		while( playerAPosition < winPosition && playerBPosition < winPosition){
+			numberOfDice++;
+			int dice=(int)(Math.random()*6)+1;
+			System.out.println("Number got on dice=" +dice);
+			int checkOption=(int)(Math.random()*3)+1;
+			System.out.println("checking option=" +checkOption);
+
+			switch(checkOption) {
+			case 1: //ladder
 				if ((playerAPosition+dice)<=winPosition)
-				playerAPosition=playerAPosition+dice;
+					playerAPosition=playerAPosition+dice;
 				System.out.println("position of the player A=" +playerAPosition);
 				break;
-		case 2: //snake
+			case 2: //snake
 				playerAPosition-=dice;
 				if ((playerAPosition-dice)<0)
-				playerAPosition=0;	
+					playerAPosition=0;	
 				System.out.println("position of the player A=" +playerAPosition);
 				break;
-		case 3: //NoPlay
+			case 3: //NoPlay
 				System.out.println("No Play");
 				break;
-				
-		}
-	} 
 
-}
+			}
+		} 
+		System.out.println("total number of dice rolled=" +numberOfDice);
+	}
 }
