@@ -2,7 +2,6 @@ package com.snakeLadderSimulation;
 
 public class snakeLadderSimulation {
 	
-	public static boolean isPlayer=true;
 	public static final int winPosition=100;
 	
 	public static void main (String []args) {
@@ -13,8 +12,8 @@ public class snakeLadderSimulation {
 		int playerBPosition=0;
 		System.out.println("Welcome to SnakeLadder Simulation");
 
+	while( playerAPosition < winPosition && playerBPosition < winPosition){
 		int dice=(int)(Math.random()*6)+1;
-		numberOfDice++;
 		System.out.println("Number got on dice=" +dice);
 		int checkOption=(int)(Math.random()*3)+1;
 		System.out.println("checking option=" +checkOption);
@@ -35,4 +34,5 @@ public class snakeLadderSimulation {
 		}
 	} 
 
+}
 }
